@@ -1,0 +1,8 @@
+winproject/mupen64/bin
+winproject/mupen64/ipch
+winproject/mupen64/obj/
+*.opensdf
+*.sdf
+*.suo
+*.suo
+*.vcxproj.user
