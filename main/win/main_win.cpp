@@ -16,7 +16,6 @@
  ***************************************************************************/
 
 
-#include "LuaConsole.h"
 #include "win/DebugInfo.hpp"
 	
 #if defined(__cplusplus) && !defined(_MSC_VER)
@@ -558,7 +557,7 @@ void search_plugins()
 	liste_plugins->next = NULL;
 	current = liste_plugins;
 
-	String pluginDir;
+	std::string pluginDir;
 	if(Config.DefaultPluginsDir)
 	{
 		pluginDir.assign(AppPath).append("\\plugin");
@@ -577,9 +576,9 @@ void search_plugins()
 
 	do
 	{ //pluginディレクトリを読んで、プラグインリストを生成
-		if(String(::getExtension(entry.cFileName)) == "dll")
+		if(std::string(::getExtension(entry.cFileName)) == "dll")
 		{
-			String pluginPath;
+			std::string pluginPath;
 			pluginPath.assign(pluginDir)
 				.append("\\").append(entry.cFileName);
 			MUPEN64RR_DEBUGINFO(pluginPath);
@@ -2702,13 +2701,11 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 			{
 			case ID_MENU_LUASCRIPT_NEW:
 				{
-					MUPEN64RR_DEBUGINFO("LuaScript New");
-					::NewLuaScript(app_hInstance, mainHWND);
+					//TODO
 				} break;
 			case ID_MENU_LUASCRIPT_CLOSEALL:
 				{
-					MUPEN64RR_DEBUGINFO("LuaScript CloseALL");
-					::CloseAllLuaScript();
+					//TODO
 				} break;
 			case IDGFXCONFIG:
 				{
@@ -3194,7 +3191,7 @@ int WINAPI WinMain(
     
   // ensure folders exist!
   {
-		String path = AppPath;
+		std::string path = AppPath;
 		CreateDirectory((path + "save").c_str(), NULL);
 		CreateDirectory((path + "Mempaks").c_str(), NULL);
 		CreateDirectory((path + "Lang").c_str(), NULL);
@@ -3329,8 +3326,7 @@ int WINAPI WinMain(
     
 		while(GetMessage(&Msg, NULL, 0, 0) > 0)
 		{
-			if (!TranslateAccelerator(mainHWND,Accel,&Msg)
-			&& !::IsLuaConsoleMessage(&Msg))
+			if (!TranslateAccelerator(mainHWND,Accel,&Msg))
 			{
 				TranslateMessage(&Msg);
 				DispatchMessage(&Msg);

@@ -260,7 +260,6 @@
     <ClInclude Include="..\..\r4300\x86\assemble.h" />
     <ClInclude Include="..\..\r4300\x86\interpret.h" />
     <ClInclude Include="..\..\r4300\x86\regcache.h" />
-    <ClInclude Include="..\..\lua\LuaConsole.h" />
     <ClInclude Include="..\resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -660,7 +659,6 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">CompileAsCpp</CompileAs>
     </ClCompile>
-    <ClCompile Include="..\..\lua\LuaConsole.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\rsrc.rc" />

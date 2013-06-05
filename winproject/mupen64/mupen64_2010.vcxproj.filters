@@ -173,9 +173,6 @@
     <ClInclude Include="..\..\r4300\x86\regcache.h">
       <Filter>Source Files\r4300\x86</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\lua\LuaConsole.h">
-      <Filter>Source Files\lua</Filter>
-    </ClInclude>
     <ClInclude Include="..\resource.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
@@ -411,9 +408,6 @@
     </ClCompile>
     <ClCompile Include="..\..\r4300\x86\rjump.c">
       <Filter>Source Files\r4300\x86</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\lua\LuaConsole.cpp">
-      <Filter>Source Files\lua</Filter>
     </ClCompile>
     <ClCompile Include="..\..\memory\dma.c">
       <Filter>Source Files\memory</Filter>
