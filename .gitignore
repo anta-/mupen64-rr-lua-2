@@ -6,3 +6,5 @@ winproject/mupen64/obj/
 *.suo
 *.suo
 *.vcxproj.user
+stdout.txt
+stderr.txt
