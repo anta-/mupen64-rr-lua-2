@@ -2707,6 +2707,10 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 				{
 					//TODO
 				} break;
+			case ID_TRACELOG:
+				{
+					//TODO
+				} break;
 			case IDGFXCONFIG:
 				{
 				 BOOL wasPaused = emu_paused;
