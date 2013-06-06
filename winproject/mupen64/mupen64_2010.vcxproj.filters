@@ -194,6 +194,9 @@
     <ClInclude Include="..\..\memory\tlb.h">
       <Filter>Source Files\memory</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\lua\luamessage.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main\adler32.c">
@@ -426,6 +429,9 @@
     </ClCompile>
     <ClCompile Include="..\..\main\win\vcr_compress.c">
       <Filter>Source Files\main\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua\luamessage.cpp">
+      <Filter>Source Files\lua</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
