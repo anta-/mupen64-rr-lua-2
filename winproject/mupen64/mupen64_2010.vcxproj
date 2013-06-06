@@ -149,6 +149,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\config.h" />
+    <ClInclude Include="..\..\lua\luaconsole.h" />
     <ClInclude Include="..\..\lua\luamessage.h" />
     <ClInclude Include="..\..\main\Audio_#1.1.h" />
     <ClInclude Include="..\..\main\Controller_#1.1.h" />
@@ -264,6 +265,7 @@
     <ClInclude Include="..\resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\lua\luaconsole.cpp" />
     <ClCompile Include="..\..\lua\luamessage.cpp" />
     <ClCompile Include="..\..\main\adler32.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>

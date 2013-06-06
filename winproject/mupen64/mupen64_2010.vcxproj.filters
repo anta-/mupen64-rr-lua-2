@@ -197,6 +197,9 @@
     <ClInclude Include="..\..\lua\luamessage.h">
       <Filter>Source Files\lua</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\lua\luaconsole.h">
+      <Filter>Source Files\lua</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main\adler32.c">
@@ -431,6 +434,9 @@
       <Filter>Source Files\main\win</Filter>
     </ClCompile>
     <ClCompile Include="..\..\lua\luamessage.cpp">
+      <Filter>Source Files\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lua\luaconsole.cpp">
       <Filter>Source Files\lua</Filter>
     </ClCompile>
   </ItemGroup>

@@ -47,7 +47,7 @@
 #define IDI_M64ICONSMALL 180
 #define IDI_M64ICONBIG   181 
 //Lua
-#define IDD_LUAWINDOW 182
+#define IDD_LUACONSOLE 182
 
 #define IDC_WEBSITE 190
 
@@ -376,7 +376,7 @@
 #define IDC_PAUSEAT_FIELD               9508
 //Lua
 #define IDC_TEXTBOX_LUASCRIPTPATH       9509
-#define IDC_TEXTBOX_LUACONSOLE          9510
+#define IDC_TEXTBOX_LUAOUTPUT           9510
 #define IDC_BUTTON_LUASTART             9511
 #define IDC_BUTTON_LUASTOP              9512
 #define IDC_BUTTON_LUAEDIT              9513
