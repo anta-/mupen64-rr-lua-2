@@ -19,6 +19,7 @@ class LuaConsole {
 			app_hInstance,
 			MAKEINTRESOURCE(IDD_LUACONSOLE),
 			mainHWND, dialogProc);
+		ShowWindow(hwnd, SW_SHOW);
 	}
 
 public:
@@ -35,3 +36,6 @@ INT_PTR WINAPI LuaConsole::dialogProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM
 	return FALSE;
 }
 
+void newLuaConsole(void) {
+	return LuaConsole::newLuaConsole();
+}

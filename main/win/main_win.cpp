@@ -58,6 +58,9 @@ extern "C" {
 #include "kaillera.h"
 #undef EMULATOR_MAIN_CPP_DEF
 
+#include "luamessage.h"
+#include "luaconsole.h"
+
 extern void CountryCodeToCountryName(int countrycode,char *countryname);
 
 #if defined(__cplusplus) && !defined(_MSC_VER)
@@ -1446,7 +1449,6 @@ void CreateStatusBarWindow(HWND hwnd)
 
 int pauseAtFrame = -1;
 
-
 LRESULT CALLBACK PlayMovieProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 {
     char tempbuf [MAX_PATH];
@@ -2701,7 +2703,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 			{
 			case ID_MENU_LUASCRIPT_NEW:
 				{
-					//TODO
+					newLuaConsole();
 				} break;
 			case ID_MENU_LUASCRIPT_CLOSEALL:
 				{

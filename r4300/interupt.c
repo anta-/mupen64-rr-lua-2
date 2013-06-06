@@ -48,6 +48,7 @@
 #include "../main/savestates.h"
 #include "../main/vcr.h"
 
+#include "../lua/luamessage.h"
 
 unsigned long next_vi;
 int vi_field=0;
@@ -536,6 +537,8 @@ void gen_interupt()
 ////		processDList();
 //		processRDPList();
 //		updateScreen();
+
+		processLuaMessages();
 	 }
 #endif
 }

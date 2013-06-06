@@ -5,24 +5,39 @@
 
 //Look-free queueÇ∆Ç©Ç‡Ç†ÇÈÇÒÇæÇÎÇ§ÇØÇ«Åc
 static std::queue<LuaMessageCallback> q;
-static CRITICAL_SECTION cs;
+
+class CriticalSection {
+	CRITICAL_SECTION cs;
+	
+public:
+	CriticalSection() {
+		InitializeCriticalSection(&cs);
+	}
+	~CriticalSection() {
+		DeleteCriticalSection(&cs);
+	}
+
+	void enter() { EnterCriticalSection(&cs); }
+	void leave() { LeaveCriticalSection(&cs); }
+};
+CriticalSection cs;
 
 void postLuaMessage(LuaMessageCallback callback) {
-	EnterCriticalSection(&cs);
+	cs.enter();
 
 	q.push(callback);
 
-	LeaveCriticalSection(&cs);
+	cs.leave();
 }
 
-void processLuaMessage(void) {
-	EnterCriticalSection(&cs);
+void processLuaMessages() {
+	cs.enter();
 
 	while(!q.empty()) {
 		q.front()();
 		q.pop();
 	}
 
-	LeaveCriticalSection(&cs);
+	cs.leave();
 }
 
